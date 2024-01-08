@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Montserrat-Regular'),
+        url('../Fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../Fonts/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        local('Montserrat-Bold'),
+        url('../Fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../Fonts/Montserrat--Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: local('Montserrat-Bold'),
+        url('../Fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../Fonts/Montserrat--Bold.woff') format('woff');
+}
+
+:root {
+    --default: #FF9900;
+    --hover: #FFB84D;
+    --active: #E1670E;
+    --green: #97EE3F;
+    --white: #FFFFFF;
+    --silver: #CACACA;
+    --background: rgba(0, 0, 0, 0.1);
+    --silver-3: #666666;
+    --silver-4: #414141;
+    --black: #000000;
+    --background-white: rgb(255, 255, 255);
+    --text-back: rgba(0, 0, 0, 0.5);
+}
+
+.descr-reset {
+    margin: 0;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.reset-heading {
+    margin: 0;
+    padding: 0;
+}
+
+.burger {
+    position: relative;
+    margin-top: 25px;
+    display: none;
+    width: 30px;
+    height: 23px;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    border-color: transparent;
+}
+
+.header__burger:hover {
+    cursor: pointer;
+}
+
+.burger__line {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+}
+
+
+.burger__line:nth-child(1) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+}
+
+
+.burger__line:nth-child(2) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+}
+
+
+.burger__line:nth-child(3) {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+}
+
+/*header*/
+
+.header {
+    position: relative;
+    background-color: var(--black);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktop-menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    text-decoration: none;
+}
+
+.header__link {
+    color: #00bfff;
+    /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    /* Убираем подчеркивание */
+}
+
+.header__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    /* Высота линии */
+    background-color: var(--default);
+    /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s;
+    /* Время эффекта */
+}
+
+.header__link:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    /* Высота линии */
+    background-color: red;
+    /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;
+    /* Время эффекта */
+}
+
+.header__list {
+    display: flex;
+    gap: 83px;
+}
+
+.header__logo-wrap {
+    padding: 5px 0;
+}
+
+.header__logo {
+    height: 60px;
+}
+
+.header__logo:hover {
+    outline: 2px solid var(--default);
+}
+
+.header__logo:active {
+    opacity: 0.6;
+    outline: 2px var(--hover);
+}
+
+.header__link {
+    cursor: pointer;
+}
+
+.header__nav .header__link:focus {
+    outline: 2px solid var(--hover);
+}
+
+.header__nav .header__link:active {
+    color: var(--active);
+    border-bottom: 2px solid var(--active);
+}
+
+.header__nav .header__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+}
+
+.header__btn {
+    border: none;
+    width: 26px;
+    height: 26px;
+    outline: none;
+    cursor: pointer;
+    background: var(--white);
+}
+
+.container {
+    padding: 0 75px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.section-form {
+    padding-top: 120px;
+}
+
+/* .body{
+    
+} */
+.form {
+    align-items: center;
+    width: 300px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+
+}
+.form__input,
+.form__button {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.form__title {
+    text-align:center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+}
+.form__group {
+    position: relative;
+    margin-bottom: 32px;
+}
+.form__label {
+    position:absolute;
+    top: 0;
+    z-index: -1;
+    color: #9e9e9e;
+    transition: 0.3s;
+}
+.form__input {
+    width: 100%;
+    padding 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+
+}
+.form__input:focus {
+    border-bottom: 1px solid #1a73a8;
+}
+.form__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form__button:focus,
+.form__button:hover {
+    background-color: rgba(0, 113, 240, 0.7);
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+    top: -18px;
+    font-size: 12px;
+    color: #e0e0e0;
+                                                    }
+

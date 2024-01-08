@@ -1,0 +1,15 @@
+User-Agent: *
+Allow: /
+Allow: /bookmap/index.html
+Allow: /ya-go-scooter/index.html
+Allow: /travel/index.html
+Allow: /Gallery/index.html
+Allow: /petersburg-travel/public_html/index.html
+Allow: /skillbox/index.html
+Allow: /leanding-site/index.html
+Allow: /Lagoona-new/index.html
+Allow: /evklug/public_html/index.html
+Allow: /Lagoona-site/index.html
+Allow: /post/bay%20domain.html
+Allow: /post/reg%20domain.html
+Allow: /post/26-11-23.html
